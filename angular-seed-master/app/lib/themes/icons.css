@@ -1,0 +1,14 @@
+.fplogo-icon {
+    background-image: url(assets/icons/fp_logo.svg);
+    background-repeat: round;
+  }
+  
+  .menu-icon {
+    background-image: url(assets/icons/menu.png);
+    background-repeat: round;
+  }
+  
+  .search-icon{
+    background-image: url(assets/icons/search.svg);
+    background-repeat: round;
+  }

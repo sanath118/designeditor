@@ -1,0 +1,235 @@
+<!-- <link rel="stylesheet" href="../../assets/css/fonts.css" type='text/css' /> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type='text/css'>
+<script src="../lib/angular/angular.js"></script>
+<script src="../lib/angular-route/angular-route.js"></script>
+<div id="animate" class="scroll">
+    <div class="mainContainer">
+        <div class="backgroundImage">
+            <a href="index.html">
+                <div class="fpLogo">
+                </div>
+            </a>
+            <div class="headerText">
+                Y O U - C H O O S E | W H A T - Y O U - G E T
+            </div>
+            <div class="secondaryContainer" ng-controller="AppController">
+                <div class="mainBox">
+                    <!-- SIDE BAR FOR ACTION ITEMS AND TEXT EDITOR -->
+                    <div class="tabsBar">
+                        <div class="tabs">
+                            <div class="single">
+                                <div class="container-1 labelMakeup" ng-click="uploadImage()">
+                                    <label class="modButton btn-one">
+                                        <span class="whiteText">Upload Image
+                                            <input type="file" id="uploadFile" style="display: none;">
+                                        </span>
+
+                                    </label>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="container-1" ng-click="addText()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Add Text</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single">
+                                <div class="container-1" ng-click="openForm()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Save Design</span>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="container-1" ng-click="openLoadForm()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Load Design</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-popup" id="saveForm">
+                                <form class="form-container">
+
+                                    <label style="color:white;">
+                                        Design Name
+                                    </label>
+                                    <input type="text" placeholder="Enter Design Name" ng-model="designName" required>
+                                    <div class="flex">
+                                        <div class="container-1 halfwidth">
+                                            <div class="modButton btn-one modButton-form" ng-click="saveDesign()">
+                                                <span class="whiteText">Save</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="container-2 halfwidth">
+                                            <div class="modButton btn-one modButton-form" ng-click="closeForm()">
+                                                <span class="whiteText">Cancel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <div class="form-popup loadform" id="loadForm">
+                                <form class="form-container">
+
+                                    <label style="color:white;">
+                                        Load Design
+                                    </label>
+                                    <div class="listbox">
+                                        <div ng-repeat="n in loadedDesigns track by $index">
+                                            <div class="container-1" ng-click="reloadCanvas(n['imagedata'])">
+                                                <div class="modButton modLoadButton btn-one">
+                                                    <span class="whiteText"> {{n.id}} </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex customcancel">
+                                        <div class="container-2">
+                                            <div class="modButton btn-one modButton-form" ng-click="closeLoadForm()">
+                                                <span class="whiteText">Cancel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <div class="single">
+                                <div class="container-2" ng-click="deleteObject()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Delete Object</span>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="container-1" ng-click="downloadImage()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Download</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single">
+                                <div class="container-1" ng-click="bringToFront()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Front</span>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="container-1" ng-click="bringToBack()">
+                                    <div class="modButton btn-one">
+                                        <span class="whiteText">Back</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div id="textEditor">
+                                <div class="flex bottomspace">
+                                    <input type="color" value="#000000" id="text-color" size="10">
+                                    <label for="font-family" class="whiteText textlabel">Font family:</label>
+                                    <select class="form-control customSelect" id="font-family">
+                                        <option value="arial">Arial</option>
+                                        <option value="helvetica" selected>Helvetica</option>
+                                        <option value="myriad pro">Myriad Pro</option>
+                                        <option value="verdana">Verdana</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="courier">Courier</option>
+                                        <option value="comic sans ms">Comic Sans MS</option>
+                                        <option value="impact">Impact</option>
+                                        <option value="monaco">Monaco</option>
+                                    </select>
+                                </div>
+                                <div class="flex bottomspace">
+                                    <label for="text-align" class="whiteText textlabel" style="display:inline-block">Text align:</label>
+                                    <select class="form-control customSelect" id="text-align">
+                                        <option value="left">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="justify">Justify</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex bottomspace">
+                                    <label class="whiteText textlabel" for="text-bg-color">Background color: &nbsp</label>
+                                    <input type="color" value="#000000" id="text-bg-color" size="10">
+                                </div>
+                                <!-- <div class="flex bottomspace">
+                                    <label class="whiteText textlabel" for="text-lines-bg-color">Background text color: &nbsp</label>
+                                    <input type="color" value="#000000" id="text-lines-bg-color" size="10">
+                                </div> -->
+                                <div class="flex bottomspace">
+                                    <label class="whiteText textlabel" for="text-stroke-color">Stroke color: &nbsp</label>
+                                    <input type="color" value="#000000" id="text-stroke-color">
+                                </div>
+                                <div class="flex bottomspace">
+
+
+                                    <label class="whiteText textlabel" for="text-stroke-width">Stroke width: &nbsp</label>
+                                    <input type="range" value="1" min="1" max="5" id="text-stroke-width">
+                                </div>
+                                <div class="flex bottomspace">
+                                    <label class="whiteText textlabel" for="text-font-size">Font size: &nbsp</label>
+                                    <input type="range" class="form-control-range customslider" value="" min="1" max="120" step="1" id="text-font-size">
+                                </div>
+
+                                <div class="flex bottomspace">
+                                    <label class="whiteText textlabel" for="text-line-height">Line height: &nbsp</label>
+                                    <input type="range" class="form-control-range customslider" value="" min="0" max="10" step="0.1" id="text-line-height">
+                                </div>
+
+                                <div id="text-controls-additional" class="flex bottomspace">
+                                    <div class="checkboxes">
+                                        <input type='checkbox' name='fonttype' id="text-cmd-bold">
+                                        <label class="whiteText">Bold</label>
+                                    </div>
+                                    <div class="checkboxes">
+                                        <input type='checkbox' name='fonttype' id="text-cmd-italic">
+                                        <label class="whiteText">Italic</label>
+                                    </div>
+                                    <div class="checkboxes">
+                                        <input type='checkbox' name='fonttype' id="text-cmd-underline">
+                                        <label class="whiteText">Underline</label>
+                                    </div>
+                                    <div class="checkboxes">
+                                        <input type='checkbox' name='fonttype' id="text-cmd-linethrough">
+                                        <label class="whiteText">Linethrough</label>
+                                    </div>
+                                    <div class="checkboxes">
+                                        <input type='checkbox' name='fonttype' id="text-cmd-overline">
+                                        <label class="whiteText">Overline</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION FOR CANVAS -->
+                    <div class="sections">
+                        <canvas id="canvas" class="center-block box-shadow" ng-mouseup="trackEditHistory()" width="450" height="450"></canvas>
+                    </div>
+
+                    <!-- REGION FOR TRACKING EDIT HISTORY -->
+                    <div class="historytab">
+                        <label class="edithistory whiteText">Edit History</label>
+                        <div class="historymainbody">
+                            <div class="historybody" ng-repeat="data in history track by $index">
+                                <div class="container-1" ng-click="reloadCanvas(data)">
+                                    <div class="modButton modHistoryButton btn-one">
+                                        <span class="whiteText" style="text-align:center; margin-left:8px"> Edit {{$index+1}} </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="loader"></div> -->
+</div>

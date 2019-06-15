@@ -1,0 +1,149 @@
+.nav-link.dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .fpbg {
+    height: 80px;
+  }
+  
+  .header-bg {
+    background: #fbfbfb;
+  }
+  
+  .header-white-bg {
+    background: white;
+  }
+  
+  .menu {
+    width: 26px;
+    height: 21px;
+  }
+  
+  .fplogo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tranform-logo{
+    transform: scale(1.5);
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vertical-center {
+    display: flex;
+    align-items: center;
+  }
+  .removepadding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .removemargin {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .headericoncommon {
+    max-width: 6%;
+  }
+  
+  .heartlogo {
+    width: 24px;
+    height: 22px;
+  }
+  
+  .basketlogo {
+    width: 24px;
+    height: 23px;
+    cursor: pointer;
+  }
+  
+  .search {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .circle {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #43bb86;
+  }
+  
+  .suggestion-main {
+    width: 48%;
+    margin-left: 15px;
+    position: absolute;
+    box-shadow: 0 5px 7px 2px rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+    max-height: 500px;
+    z-index: 1;
+    top: 80%;
+    border-top: 0px;
+  }
+
+  .custommargin{
+    margin-top: 27px;
+  }
+
+  .custommarginleft{
+    margin-left: -16px;
+  }
+  
+  .suggestion-text {
+    color: #4a4a4a;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .suggestion-text:hover {
+    background: #f4f5fa;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .fpbg {
+      background: #fbfbfb;
+      height: 120px;
+    }
+  
+    .vertical-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .col-1 {
+      max-width: 12%;
+    }
+  
+    .col-10 {
+      max-width: 78%;
+    }
+  
+    .suggestion-main {
+      width: auto;
+      top: auto;
+      margin-left: auto;
+    }
+  }
+  

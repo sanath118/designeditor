@@ -1,0 +1,465 @@
+.mainContainer{
+    position: relative;
+    background: rgba(245, 246, 250, 1);
+    height: auto;
+}
+
+.secondaryContainer{
+    width: 100%;
+    height: auto;
+    min-height: 565px;
+    margin-top: 143px;
+    position: absolute;
+}
+
+.mainBox{
+    position: relative;
+    display: flex;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 70px;
+    width: 1314px;
+    box-shadow: 0px 2px 2px 0px rgba(199, 202, 210, 0.52);
+}
+
+.backgroundImage{
+    background-image: url('assets/images/fpBg.png');
+    width:100%;
+    height: 865px !important;
+    position: relative;
+}
+
+.imageCenter{
+    text-align: center;
+}
+
+
+.fpLogo{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    margin-left: 84px;
+    margin-top: 58px;
+    background-image: url('assets/icons/fp_logo.svg');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.headerText{
+    position: absolute;
+    width: 100%;
+    font-family: Verdana,sans-serif;
+    font-size: 18px;
+    color: beige;
+    /* text-shadow: 2px 1px snow; */
+    margin-top: 78px;
+    /* margin-left: 414px; */
+    text-align: center;
+}
+
+.tabsBar{
+    width: 400px;
+    background: #282828;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs{
+    margin-top: 58px;
+    width: 320px;
+    height: auto;
+    background: #282828;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+.sections{
+    width: 700px;
+    background: rgba(255, 255, 255, 1);
+    /* max-height: 530px; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.edithistory{
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    padding: 20px 0 40px 0;
+    justify-content: center;
+    background: #77bbff;
+    margin-bottom: 0px !important;
+}
+
+.historytab{
+    background: #282828;
+    width: 200px;
+    /* max-height: 596px; */
+}
+
+.historymainbody{
+    height: 625px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.single{
+    cursor: pointer;
+    color:white;
+    margin-bottom:22px;
+    display: flex;
+    width: 320px;
+    justify-content: center;
+}
+
+.line{
+    position: absolute;
+    height: 343px;
+width: 3px;
+border: 1px solid rgba(151, 151, 151, 1);
+}
+
+
+.buttonAlign{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
+    /* float: left; */
+    margin-bottom: 25px;
+    align-self: center;
+}
+
+  
+   .current_sect_text_class{
+    font-family: 'Calibre-Medium';
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    margin-left: 22px;
+    
+    margin-top: 2px;
+   }
+  
+
+  
+
+
+   .sectionBody{
+    height: auto;
+    width: auto;
+    margin-left: 70px;
+    margin-top: 40px;
+   }
+
+   .heading{
+    font-family: 'Calibre-Medium';
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+    margin-bottom: 32px;
+   }
+
+   .rowAdjust{
+       margin-left:2px;
+   }
+
+   .textAlignPP{
+       text-align: left;
+       font-family: 'Calibre-Regular';
+        font-size: 18px;
+        color: rgba(74, 74, 74, 1);
+   }
+
+
+
+
+  .fullRow{
+      width:100%;
+  }
+
+
+
+
+
+
+  
+
+
+  .single_line_class{
+    width: 830px;
+    border: 1px solid #ccd1e3;
+    margin-top: 9px;
+    margin-bottom: 25px;
+  }
+
+  .straightLine{
+    height: 74px;
+    z-index: 100;
+    position: absolute;
+    border-left: 1px solid #979797;
+    margin-top: -56px;
+    margin-left: 4px;
+  }
+
+
+  /* BUTTONS CSS */
+
+  .container-1 { 
+      background: #333; 
+    }
+
+    .container-2 {
+        background: #e73040;
+    }
+
+    .separator{
+        width: 5px;
+    }
+
+    .labelMakeup{
+        height: 45px;
+    }
+
+    .modButton {
+        position: relative;
+        color: white;
+        width: 156px;
+        height: 45px;
+        line-height: 45px;
+        /* padding: 1.375rem .75rem !important; */
+        transition: all 0.3s;
+        span {
+          transition: all 0.3s;
+          tranform: scale(1, 1);
+        }
+      }
+      
+      .modButton::before, .btn::after {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      .btn-one::before {
+          left: 4px;
+          z-index: 1;
+        
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(0.1, 1);
+      }
+      
+      .btn-one:hover::before {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+      
+      .btn-one::after {
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      
+      .btn-one:hover::after {
+        transform: scale(1, .1);
+        opacity: 0;
+      }
+
+      .whiteText{
+          color:white;
+      }
+
+
+      /* Save Popup */
+      /* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: absolute;
+    bottom: 293px;
+    /* right: 37px; */
+    left: 536px;
+    border: 1px solid black;
+    z-index: 9;
+    border-radius: 3px;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 350px;
+    padding: 10px;
+    background-color: #282828;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 6px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .button:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  .modButton-form{
+    width: 160px;
+    height: 40px;
+    line-height: 39px;
+  }
+
+  .flex{
+      display: flex;
+  }
+
+  .halfwidth{
+      width: 50%;
+  }
+
+.loadform{
+    width: 280px;
+    bottom: 174px;
+    /* right: 37px; */
+    left: 565px;
+}
+
+.listbox{
+    width: 260px;
+    height: auto;
+    max-height: 190px;
+    color: black;
+    background: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.listvalue{
+    height: 38px;
+}
+
+.modLoadButton{
+    width: 250px;
+}
+
+.modHistoryButton{
+    width: 195px;
+}
+
+.customcancel{
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.customSelect{
+    width: 130px !important;
+    height: 30px !important;
+    line-height: 1 !important;
+    margin-top: -2px !important;
+    padding: 0 !important;
+    margin-left: 5px !important;
+}
+
+.textlabel{
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.bottomspace{
+    margin-bottom: 10px;
+}
+
+.customslider{
+    width: 150px !important;
+}
+
+
+.checkboxes{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+  
+
+  
+   #saveForm {
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; /* Firefox */
+    -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+    -o-animation: fadein 1.5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

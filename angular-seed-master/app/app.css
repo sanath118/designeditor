@@ -1,0 +1,51 @@
+
+
+/*ICON CSS*/
+/* .fplogo-icon {
+  background-image: url(assets/icons/fp_logo.svg);
+  background-repeat: round;
+} */
+
+.menu-icon {
+  background-image: url(assets/icons/menu.png);
+  background-repeat: round;
+}
+
+.search-icon{
+  background-image: url(assets/icons/search.svg);
+  background-repeat: round;
+}
+
+.heart-icon {
+  background-image: url(assets/icons/heart.png);
+  background-repeat: round;
+}
+
+.basket-icon {
+  background-image: url(assets/icons/basket.png);
+  background-repeat: round;
+}
+
+/* Editor Images */
+.backgroundImage{
+  background-image: url(assets/images/fpBg.png);
+  width:100%;
+  height: 725px;
+  position: relative;
+}
+
+/* .fpLogo{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  margin-left: 84px;
+  margin-top: 58px;
+  background-image: url(assets/icons/fp_logo.svg);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+} */
+
+.historybody{
+  max-width: 500px;
+}
